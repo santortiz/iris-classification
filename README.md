@@ -107,9 +107,9 @@ curl -X POST "http://127.0.0.1:8000/predict?return_label=true" \
 - Install dependencies using `pip install -r requirements.txt`.
 
 ### Running the App
-Start the FastAPI server locally:
+Start the FastAPI server locally using Docker:
 ```bash
-uvicorn main:app --reload
+docker compose -f docker/docker-compose.yml up --build
 ```
 
 The API will be accessible at `http://127.0.0.1:8000`.
