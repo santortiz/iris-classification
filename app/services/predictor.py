@@ -2,7 +2,7 @@ import os
 import pickle
 import numpy as np
 from typing import Union
-from schemas.features import IrisFeatures
+from app.schemas.features import IrisFeatures
 
 from dotenv import load_dotenv
 

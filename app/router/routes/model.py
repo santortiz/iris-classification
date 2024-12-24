@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Query
-from schemas.features import IrisFeatures
-from services.predictor import predictor_service
+from app.schemas.features import IrisFeatures
+from app.services.predictor import predictor_service
 
 router = APIRouter()
 

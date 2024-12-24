@@ -1,0 +1,13 @@
+services:
+  iris-classification:
+    build:
+      context: ..
+      dockerfile: docker/dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../:/usr/src/app/
+    environment:
+      - BEST_MODEL_PATH=models/best_lr.pkl
+      - SCALER_PATH=models/scaler.pkl
+    command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
